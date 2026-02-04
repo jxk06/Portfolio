@@ -1,12 +1,15 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 import projects from "../data/projects";
-import "./ProjectPage.css"; // ✅ MUST be this path since CSS is in the same folder
+import "./ProjectPage.css";
 
-import caseIcon from "../assets/images/projects.jpg"; // ✅ add your icon here
+import caseIcon from "../assets/projects.jpg";
 
 export default function ProjectPage() {
   const { id } = useParams();
   const project = projects.find((p) => p.id === Number(id));
+
+  const [activeMedia, setActiveMedia] = useState(null);
 
   if (!project) {
     return <h1 style={{ padding: "3rem" }}>Project Not Found</h1>;
@@ -21,7 +24,6 @@ export default function ProjectPage() {
       <header className="project-header">
         <span className="project-tag-large">{project.tag}</span>
 
-        {/* ✅ Icon beside the project title */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <img
             src={caseIcon}
@@ -42,19 +44,28 @@ export default function ProjectPage() {
         )}
       </header>
 
+      {/* MEDIA SECTION */}
       <section className="project-media">
         <h2 className="project-sectionTitle">Media</h2>
 
         <div className="media-grid">
           {project.media?.map((src, index) =>
             src.toLowerCase().endsWith(".mp4") ? (
-              <div className="media-item" key={index}>
-                <video controls className="media-video">
+              <div
+                className="media-item clickable"
+                key={index}
+                onClick={() => setActiveMedia(src)}
+              >
+                <video className="media-video" muted>
                   <source src={src} type="video/mp4" />
                 </video>
               </div>
             ) : (
-              <div className="media-item" key={index}>
+              <div
+                className="media-item clickable"
+                key={index}
+                onClick={() => setActiveMedia(src)}
+              >
                 <img src={src} alt="" className="media-img" />
               </div>
             )
@@ -62,6 +73,7 @@ export default function ProjectPage() {
         </div>
       </section>
 
+      {/* PROCESS */}
       <section className="project-details-card">
         <h2 className="project-sectionTitle">Process</h2>
 
@@ -82,7 +94,31 @@ export default function ProjectPage() {
           </div>
         </div>
       </section>
+
+      {/* LIGHTBOX */}
+      {activeMedia && (
+        <div className="media-lightbox" onClick={() => setActiveMedia(null)}>
+          <button
+            className="lightbox-close"
+            onClick={() => setActiveMedia(null)}
+          >
+            ✕
+          </button>
+
+          <div
+            className="lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {activeMedia.toLowerCase().endsWith(".mp4") ? (
+              <video controls autoPlay>
+                <source src={activeMedia} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={activeMedia} alt="" />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-

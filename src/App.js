@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,9 +14,9 @@ import ProjectPage from "./components/ProjectPage";
 import Contact from "./components/Contact";
 import "./App.css";
 
-import bgHome from "./assets/images/bg-home-city.png";
-import bgAbout from "./assets/images/bg-about-stars2.jpg";
-import bgContact from "./assets/images/bg-contact-hands.png";
+import bgHome from "./assets/bg-home-city.png";
+import bgAbout from "./assets/bg-about-stars2.jpg";
+import bgContact from "./assets/bg-contact-hands.png";
 
 function Layout() {
   const location = useLocation();

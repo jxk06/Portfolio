@@ -1,5 +1,5 @@
 import React from "react";
-import chatIcon from "../assets/images/icon-chat.png";
+import chatIcon from "../assets/icon-chat.png";
 
 export default function Contact() {
   return (
@@ -31,7 +31,7 @@ export default function Contact() {
             </li>
             <li>
               <strong>LinkedIn:</strong>{" "}
-              <a href="#">linkedin.com/in/your-profile</a>
+              <a href="#">https://www.linkedin.com/in/koh-jing-xi-15b808311</a>
             </li>
             <li><strong>Location:</strong> Singapore</li>
           </ul>
@@ -42,7 +42,7 @@ export default function Contact() {
           <h3>Availability</h3>
           <p>
             I’m open to internships, collaborations, and creative tech opportunities.
-            If you’re interested, feel free to email me.
+            If you’re interested, feel free to reach out to me.
           </p>
         </div>
       </div>

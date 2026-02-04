@@ -12,11 +12,11 @@ const projects = [
       
     ],
 
-    meta: ["Figma", "UI/UX", "Wireframes to Hi-Fi"],
+    meta: ["Figma", "UI/UX", "Wireframes to Hi-Fi", "Prototype"],
 
     process: {
       conceptualisation:
-        "Analysed user needs and eco-friendly shopping behavior to create an intuitive and improved browsing experience.",
+        "Identified common pain points in sustainable shopping (trust, product transparency, decision fatigue, and filtering. Defined the goal: make eco-friendly choices feel easy, credible, and visually premium while still being fast to browse.",
 
       planning:
         "Created low-fidelity sketches, user flows, and information hierarchy before developing a full design system.",
@@ -32,24 +32,24 @@ const projects = [
     tag: "Dev",
     title: "Tree Tracking App",
     subtitle: "A React Native mobile application for tracking trees.",
-    image: "/images/persona-cover.png",
+    image: "images2/Screenshot 2026-02-04 145550.png",
 
     media: [
-      "/images/persona1.png",
-      "/images/persona2.png"
+      "/videos/C346_CA2TreeMobileAppTeam4_VideoDemo.mp4",
+      
     ],
 
-    meta: ["React Native", "Mobile App", "Creative UI"],
+    meta: ["React Native", "Mobile App", "Async Storage", "Front-end", "Back-end", "Authorization", "Authentication", "SQL"],
 
     process: {
       conceptualisation:
-        "Studied Persona 5's bold graphic motifs and comic-style UI to recreate a stylised hero section.",
+        ".",
 
       planning:
         "Created moodboards, style direction, and layout sketches before designing screens.",
 
       development:
-        "Built a working front-end prototype using HTML/CSS with hover interactions reflecting Persona's visual flair."
+        "Built a working front-end mobile app and back-end database."
     }
   },
 
@@ -67,14 +67,14 @@ const projects = [
       "/images/Screenshot 2025-12-06 184743.png",
       "/images/Screenshot 2025-12-06 184814.png",
       "/images/Screenshot 2025-12-06 185052.png",
-      "/videos/test.mp4"
+      "/videos/Screen Recording 2025-12-06 184330.mp4"
     ],
 
-    meta: ["React Native", "AsyncStorage", "Mobile App"],
+    meta: ["React Native", "AsyncStorage", "Mobile App", "Front-end"],
 
     process: {
       conceptualisation:
-        "The goal was to create a simple personal finance tool to help students understand and keep track of their daily spending.",
+        "The goal was to create a simple personal finance tool to help students better understand and keep track of their  spending.",
 
       planning:
         "Designed screens for adding expenses, setting limits, viewing history, and calculating totals to target specific needs of students.",
@@ -93,16 +93,15 @@ const projects = [
     image: "/images/vr-cover.png",
 
     media: [
-      "/images/vr1.png",
-      "/images/vr2.png",
-      "/videos/vr-demo.mp4"
+    
+      "/videos/Screen Recording 2025-08-01 220548.mp4"
     ],
 
     meta: ["Unity", "C#", "VR Interaction"],
 
     process: {
       conceptualisation:
-        "Inspired by real escape rooms, the goal was to recreate interactive and immersive puzzle mechanics in VR.",
+        "Inspired by real escape rooms and magic, the goal was to recreate dramatic, interactive and immersive puzzle mechanics in VR.",
 
       planning:
         "Created a Game Design Document, Storyboarded the user journey, created user personas, mapped out object interactions, and created a sequence system for puzzle logic.",
@@ -116,16 +115,17 @@ const projects = [
     id: 5,
     category: "development",
     tag: "Dev",
-    title: "React Packing List Web App",
-    subtitle: "A React project for managing travel packing lists.",
-    image: "/images/packing-cover.png",
+    title: "AR Business Card",
+    subtitle: "A AR 3D Business Card with scanning recognition, tracking, interaction and animation.",
+    image: "/images2/Screenshot 2025-05-18 215631.png",
 
     media: [
-      "/images/packing1.png",
-      "/images/packing2.png"
+      "/videos/Screen Recording 2025-05-19 024027 - Copy.mp4",
+      "/images2/Screenshot 2026-02-04 152451.png",
+      
     ],
 
-    meta: ["React", "JavaScript", "State Management"],
+    meta: ["Unity", "Vuforia", "AR"],
 
     process: {
       conceptualisation:
@@ -138,6 +138,8 @@ const projects = [
         "Used React hooks to manage user input, add/delete items, track packed items, and display progress."
     }
   }
+
+  
 ];
 
 export default projects;
