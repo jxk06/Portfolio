@@ -16,7 +16,7 @@ const projects = [
 
     process: {
       conceptualisation:
-        "Analysed user needs and eco-friendly shopping behavior to create an intuitive browsing experience.",
+        "Analysed user needs and eco-friendly shopping behavior to create an intuitive and improved browsing experience.",
 
       planning:
         "Created low-fidelity sketches, user flows, and information hierarchy before developing a full design system.",
@@ -28,10 +28,10 @@ const projects = [
 
   {
     id: 2,
-    category: "design",
-    tag: "Design",
-    title: "Persona 5 Inspired Landing Page",
-    subtitle: "Creative UI exploration inspired by Persona 5’s visual motifs.",
+    category: "development",
+    tag: "Dev",
+    title: "Tree Tracking App",
+    subtitle: "A React Native mobile application for tracking trees.",
     image: "/images/persona-cover.png",
 
     media: [
@@ -39,7 +39,7 @@ const projects = [
       "/images/persona2.png"
     ],
 
-    meta: ["Figma", "HTML/CSS", "Creative UI"],
+    meta: ["React Native", "Mobile App", "Creative UI"],
 
     process: {
       conceptualisation:
@@ -74,10 +74,10 @@ const projects = [
 
     process: {
       conceptualisation:
-        "The goal was to create a simple personal finance tool to help students understand daily spending.",
+        "The goal was to create a simple personal finance tool to help students understand and keep track of their daily spending.",
 
       planning:
-        "Designed screens for adding expenses, setting limits, viewing history, and calculating totals.",
+        "Designed screens for adding expenses, setting limits, viewing history, and calculating totals to target specific needs of students.",
 
       development:
         "Implemented persistent storage with AsyncStorage, UI components, and spending limit alerts."
@@ -102,13 +102,13 @@ const projects = [
 
     process: {
       conceptualisation:
-        "Inspired by real escape rooms, the goal was to recreate interactive puzzle mechanics in VR.",
+        "Inspired by real escape rooms, the goal was to recreate interactive and immersive puzzle mechanics in VR.",
 
       planning:
-        "Storyboarded the user journey, mapped out object interactions, and created a sequence system for puzzle logic.",
+        "Created a Game Design Document, Storyboarded the user journey, created user personas, mapped out object interactions, and created a sequence system for puzzle logic.",
 
       development:
-        "Used C# scripting to detect correct object sequence interactions and trigger door unlocking animations."
+        "Used C# scripting to detect correct object sequence interactions and trigger animations."
     }
   },
 

@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section id="hero" className="hero">
       <div className="hero-text">
@@ -14,12 +17,12 @@ export default function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a href="#portfolio" className="btn primary">
+          <button className="btn primary" onClick={() => navigate("/portfolio")}>
             View My Work
-          </a>
-          <a href="#about" className="btn ghost">
+          </button>
+          <button className="btn ghost" onClick={() => navigate("/about")}>
             About Me
-          </a>
+          </button>
         </div>
 
         <div className="hero-meta">
@@ -43,3 +46,4 @@ export default function Hero() {
     </section>
   );
 }
+
