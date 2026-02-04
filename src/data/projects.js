@@ -8,7 +8,7 @@ const projects = [
     image: "/images/Screenshot 2025-12-09 202307.png",
 
     media: [
-      "/videos/screen-recording2.mp4",
+      "https://drive.google.com/file/d/1y70U8gjhbbtiiYBvfqeNfhNuzMRVKdMJ/view?usp=drive_link",
       
     ],
 
@@ -35,7 +35,7 @@ const projects = [
     image: "images2/Screenshot 2026-02-04 145550.png",
 
     media: [
-      "/videos/C346_CA2TreeMobileAppTeam4_VideoDemo.mp4",
+      "https://drive.google.com/file/d/1Kw3YHhvIta-IlYQh0RBZYkVjDOMbPv3H/view?usp=drive_link",
       
     ],
 
@@ -67,7 +67,7 @@ const projects = [
       "/images/Screenshot 2025-12-06 184743.png",
       "/images/Screenshot 2025-12-06 184814.png",
       "/images/Screenshot 2025-12-06 185052.png",
-      "/videos/Screen Recording 2025-12-06 184330.mp4"
+      "https://drive.google.com/file/d/1H-skoj4vXwmd5UaH_1_WCkp8iLd4RpfL/view?usp=drive_link"
     ],
 
     meta: ["React Native", "AsyncStorage", "Mobile App", "Front-end"],
@@ -94,7 +94,7 @@ const projects = [
 
     media: [
     
-      "/videos/Screen Recording 2025-08-01 220548.mp4"
+      "https://drive.google.com/file/d/144IoSnsfxxp9no1bMHF_W_vvGAWXbmKG/view?usp=drive_link"
     ],
 
     meta: ["Unity", "C#", "VR Interaction"],
@@ -120,7 +120,7 @@ const projects = [
     image: "/images2/Screenshot 2025-05-18 215631.png",
 
     media: [
-      "/videos/Screen Recording 2025-05-19 024027 - Copy.mp4",
+      "https://drive.google.com/file/d/1oTm-DC-0uHjWPSAxViKsfe6wO3pmtBi-/view?usp=drive_link",
       "/images2/Screenshot 2026-02-04 152451.png",
       
     ],
