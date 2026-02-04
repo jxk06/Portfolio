@@ -29,24 +29,34 @@ export default function Contact() {
               <strong>Email:</strong>{" "}
               <a href="mailto:jingxikoh@gmail.com">jingxikoh@gmail.com</a>
             </li>
+
             <li>
               <strong>LinkedIn:</strong>{" "}
-              <a href="#">https://www.linkedin.com/in/koh-jing-xi-15b808311</a>
+              <a
+                href="https://www.linkedin.com/in/koh-jing-xi-15b808311"
+                target="_blank"
+                rel="noreferrer"
+              >
+                linkedin.com/in/koh-jing-xi-15b808311
+              </a>
             </li>
-            <li><strong>Location:</strong> Singapore</li>
+
+            <li>
+              <strong>Location:</strong> Singapore
+            </li>
           </ul>
         </div>
 
-        {/* Keep grid balanced without a fake backend form */}
         <div className="contact-card">
           <h3>Availability</h3>
           <p>
-            I’m open to internships, collaborations, and creative tech opportunities.
-            If you’re interested, feel free to reach out to me.
+            I’m open to internships, collaborations, and creative tech
+            opportunities. If you’re interested, feel free to reach out to me.
           </p>
         </div>
       </div>
     </section>
   );
 }
+
 

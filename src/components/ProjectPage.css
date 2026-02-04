@@ -1,3 +1,6 @@
+/* =========================
+   Project Page Layout
+   ========================= */
 .project-page {
   padding: 3.2rem min(8vw, 5.5rem) 5rem;
 }
@@ -75,7 +78,9 @@
   margin: 0 0 1rem;
 }
 
-/* Media panel */
+/* =========================
+   Media Panel
+   ========================= */
 .project-media {
   margin-top: 1.6rem;
   border: var(--stroke) solid var(--paper);
@@ -84,32 +89,45 @@
   padding: 1.2rem 1.2rem 1.4rem;
 }
 
-/* ✅ media sizing fix */
+/* Grid of thumbnails */
 .media-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1rem;
 }
 
+/* Thumbnail card */
 .media-item {
   border: var(--stroke) solid rgba(255, 255, 255, 0.65);
   background: rgba(0, 0, 0, 0.35);
   overflow: hidden;
-  border-radius: 0;
   display: grid;
   place-items: center;
-  aspect-ratio: 16 / 9; /* ✅ keeps everything consistent */
+  aspect-ratio: 16 / 9;
 }
 
+/* Make thumbnails feel clickable */
+.media-item.clickable {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.media-item.clickable:hover {
+  transform: translate(-3px, -3px);
+}
+
+/* Thumbnails: image + iframe preview */
 .media-img,
-.media-video {
+.media-video,
+.media-item iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ✅ prevents giant stretching */
   display: block;
+  object-fit: cover; /* thumbnails should be cropped (preview) */
 }
 
-/* Process panel */
+/* =========================
+   Process Panel
+   ========================= */
 .project-details-card {
   margin-top: 1.6rem;
   border: var(--stroke) solid var(--paper);
@@ -141,48 +159,60 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ================= CLICK TO EXPAND (LIGHTBOX) ================= */
-
-.media-item.clickable {
-  cursor: zoom-in;
-}
-
-/* Overlay */
+/* =========================
+   LIGHTBOX (FULLSCREEN EXPAND)
+   ========================= */
 .media-lightbox {
   position: fixed;
   inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 24px;
   background: rgba(0, 0, 0, 0.85);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Close button */
 .lightbox-close {
-  position: absolute;
-  top: 20px;
+  position: fixed;
+  top: 90px; /* below sticky navbar */
   right: 24px;
-  font-size: 2rem;
-  background: transparent;
-  border: none;
-  color: #ffffff;
+  border: var(--stroke) solid var(--paper);
+  background: rgba(15, 15, 20, 0.95);
+  color: var(--paper);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
-  z-index: 1000;
+  font-weight: 900;
 }
 
-/* Media container */
+/* The modal box itself */
 .lightbox-content {
-  max-width: 90vw;
-  max-height: 85vh;
-  border: 3px solid #ffffff;
-  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.9);
-  background: #000;
+  width: min(1100px, 95vw);
+  height: min(650px, 75vh);
+  border: var(--stroke) solid var(--paper);
+  background: rgba(15, 15, 20, 0.95);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  display: grid;
+  place-items: center;
 }
 
+/* ✅ THIS is the key fix: make media fill the lightbox */
 .lightbox-content img,
-.lightbox-content video {
-  max-width: 100%;
-  max-height: 85vh;
+.lightbox-content video,
+.lightbox-content iframe {
+  width: 100%;
+  height: 100%;
   display: block;
+  object-fit: contain; /* ✅ show the FULL image/video (no cropping) */
+  background: #000;    /* makes edges look clean */
+}
+
+/* Responsive: smaller devices */
+@media (max-width: 960px) {
+  .lightbox-content {
+    width: 96vw;
+    height: 65vh;
+  }
 }

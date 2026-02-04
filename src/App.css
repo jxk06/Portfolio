@@ -226,7 +226,7 @@ h4 {
 .page-home .hero::before {
   content: "";
   position: absolute;
-  height:1250px;
+  height: 1350px;
   inset: 0;
   background-image: var(--bg-home);
   background-repeat: no-repeat;

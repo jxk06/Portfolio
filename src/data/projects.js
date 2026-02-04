@@ -8,7 +8,7 @@ const projects = [
     image: "/images/Screenshot 2025-12-09 202307.png",
 
     media: [
-      "https://drive.google.com/file/d/1y70U8gjhbbtiiYBvfqeNfhNuzMRVKdMJ/view?usp=drive_link",
+      "xPVtaejTem8",
       
     ],
 
@@ -35,7 +35,7 @@ const projects = [
     image: "images2/Screenshot 2026-02-04 145550.png",
 
     media: [
-      "https://drive.google.com/file/d/1Kw3YHhvIta-IlYQh0RBZYkVjDOMbPv3H/view?usp=drive_link",
+      "F6emgMSFkeg",
       
     ],
 
@@ -67,7 +67,7 @@ const projects = [
       "/images/Screenshot 2025-12-06 184743.png",
       "/images/Screenshot 2025-12-06 184814.png",
       "/images/Screenshot 2025-12-06 185052.png",
-      "https://drive.google.com/file/d/1H-skoj4vXwmd5UaH_1_WCkp8iLd4RpfL/view?usp=drive_link"
+      "EiEEvYv3kYQ"
     ],
 
     meta: ["React Native", "AsyncStorage", "Mobile App", "Front-end"],
@@ -90,11 +90,11 @@ const projects = [
     tag: "Dev",
     title: "VR Escape Room Prototype",
     subtitle: "A Unity VR puzzle game involving object sequence interaction.",
-    image: "/images/vr-cover.png",
+    image: "/images/Screenshot 2026-02-04 193818.png",
 
     media: [
     
-      "https://drive.google.com/file/d/144IoSnsfxxp9no1bMHF_W_vvGAWXbmKG/view?usp=drive_link"
+      "6Y41D9qAD6M"
     ],
 
     meta: ["Unity", "C#", "VR Interaction"],
@@ -120,8 +120,9 @@ const projects = [
     image: "/images2/Screenshot 2025-05-18 215631.png",
 
     media: [
-      "https://drive.google.com/file/d/1oTm-DC-0uHjWPSAxViKsfe6wO3pmtBi-/view?usp=drive_link",
+      "Egc98lN_eIA",
       "/images2/Screenshot 2026-02-04 152451.png",
+      "/images2/Screenshot 2025-05-18 215631.png",
       
     ],
 

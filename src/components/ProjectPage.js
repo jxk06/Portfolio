@@ -15,12 +15,17 @@ export default function ProjectPage() {
     return <h1 style={{ padding: "3rem" }}>Project Not Found</h1>;
   }
 
+  // Helper: detect YouTube ID (assumes IDs only, not full URLs)
+  const isYouTube = (src) =>
+    typeof src === "string" && src.length === 11 && !src.includes("/");
+
   return (
     <div className="project-page">
       <Link to="/portfolio" className="btn ghost">
         ← Back to Projects
       </Link>
 
+      {/* HEADER */}
       <header className="project-header">
         <span className="project-tag-large">{project.tag}</span>
 
@@ -50,21 +55,25 @@ export default function ProjectPage() {
 
         <div className="media-grid">
           {project.media?.map((src, index) =>
-            src.toLowerCase().endsWith(".mp4") ? (
+            isYouTube(src) ? (
               <div
-                className="media-item clickable"
                 key={index}
-                onClick={() => setActiveMedia(src)}
+                className="media-item clickable"
+                onClick={() => setActiveMedia({ type: "youtube", src })}
               >
-                <video className="media-video" muted>
-                  <source src={src} type="video/mp4" />
-                </video>
+                <iframe
+                  src={`https://www.youtube.com/embed/${src}`}
+                  title="Project video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             ) : (
               <div
-                className="media-item clickable"
                 key={index}
-                onClick={() => setActiveMedia(src)}
+                className="media-item clickable"
+                onClick={() => setActiveMedia({ type: "image", src })}
               >
                 <img src={src} alt="" className="media-img" />
               </div>
@@ -109,12 +118,16 @@ export default function ProjectPage() {
             className="lightbox-content"
             onClick={(e) => e.stopPropagation()}
           >
-            {activeMedia.toLowerCase().endsWith(".mp4") ? (
-              <video controls autoPlay>
-                <source src={activeMedia} type="video/mp4" />
-              </video>
+            {activeMedia.type === "youtube" ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${activeMedia.src}?autoplay=1`}
+                title="Expanded project video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             ) : (
-              <img src={activeMedia} alt="" />
+              <img src={activeMedia.src} alt="" />
             )}
           </div>
         </div>
