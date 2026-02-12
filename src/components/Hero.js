@@ -9,10 +9,10 @@ export default function Hero() {
       <div className="hero-text">
         <p className="hero-kicker">Digital Design & Development Student</p>
         <h1>
-          Hi, I'm <span className="accent">Jing Xi</span>.
+          Hi, I'm <span className="accent typewriter-effect">Jing Xi</span>.
         </h1>
         <p className="hero-subtitle">
-          I create immersive digital experiences through UI/UX design, web development,
+          I create immersive digital experiences through UI/UX design, web and mobile development,
           and interactive technologies.
         </p>
 

@@ -12,11 +12,9 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import ProjectPage from "./components/ProjectPage";
 import Contact from "./components/Contact";
+import Backgrounds from "./components/Backgrounds";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
-
-import bgHome from "./assets/bg-home-city.png";
-import bgAbout from "./assets/bg-about-stars2.jpg";
-import bgContact from "./assets/bg-contact-hands.png";
 
 function Layout() {
   const location = useLocation();
@@ -30,14 +28,9 @@ function Layout() {
   })();
 
   return (
-    <div
-      className={`app-root ${pageClass}`}
-      style={{
-        "--bg-home": `url(${bgHome})`,
-        "--bg-about": `url(${bgAbout})`,
-        "--bg-contact": `url(${bgContact})`,
-      }}
-    >
+    <div className={`app-root ${pageClass}`}>
+      <Backgrounds />
+
       <Navbar />
 
       <main className="app-main">
@@ -60,6 +53,7 @@ function Layout() {
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout />
     </Router>
   );

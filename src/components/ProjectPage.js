@@ -3,7 +3,7 @@ import { useState } from "react";
 import projects from "../data/projects";
 import "./ProjectPage.css";
 
-import caseIcon from "../assets/projects.jpg";
+import "./ProjectPage.css";
 
 export default function ProjectPage() {
   const { id } = useParams();
@@ -12,7 +12,7 @@ export default function ProjectPage() {
   const [activeMedia, setActiveMedia] = useState(null);
 
   if (!project) {
-    return <h1 style={{ padding: "3rem" }}>Project Not Found</h1>;
+    return <h1 className="project-not-found">Project Not Found</h1>;
   }
 
   // Helper: detect YouTube ID (assumes IDs only, not full URLs)
@@ -20,7 +20,7 @@ export default function ProjectPage() {
     typeof src === "string" && src.length === 11 && !src.includes("/");
 
   return (
-    <div className="project-page">
+    <div className="project-page active-page">
       <Link to="/portfolio" className="btn ghost">
         ← Back to Projects
       </Link>
@@ -29,12 +29,7 @@ export default function ProjectPage() {
       <header className="project-header">
         <span className="project-tag-large">{project.tag}</span>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          <img
-            src={caseIcon}
-            alt="Project icon"
-            style={{ width: "42px", height: "42px", objectFit: "contain" }}
-          />
+        <div className="flex-header">
           <h1 className="project-title-large">{project.title}</h1>
         </div>
 
@@ -89,17 +84,41 @@ export default function ProjectPage() {
         <div className="process-grid">
           <div className="process-block">
             <h3>Conceptualisation</h3>
-            <p>{project.process?.conceptualisation}</p>
+            {Array.isArray(project.process?.conceptualisation) ? (
+              <ul className="process-list">
+                {project.process.conceptualisation.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{project.process?.conceptualisation}</p>
+            )}
           </div>
 
           <div className="process-block">
             <h3>Planning</h3>
-            <p>{project.process?.planning}</p>
+            {Array.isArray(project.process?.planning) ? (
+              <ul className="process-list">
+                {project.process.planning.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{project.process?.planning}</p>
+            )}
           </div>
 
           <div className="process-block">
             <h3>Development</h3>
-            <p>{project.process?.development}</p>
+            {Array.isArray(project.process?.development) ? (
+              <ul className="process-list">
+                {project.process.development.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{project.process?.development}</p>
+            )}
           </div>
         </div>
       </section>
@@ -107,13 +126,6 @@ export default function ProjectPage() {
       {/* LIGHTBOX */}
       {activeMedia && (
         <div className="media-lightbox" onClick={() => setActiveMedia(null)}>
-          <button
-            className="lightbox-close"
-            onClick={() => setActiveMedia(null)}
-          >
-            ✕
-          </button>
-
           <div
             className="lightbox-content"
             onClick={(e) => e.stopPropagation()}

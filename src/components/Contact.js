@@ -5,24 +5,22 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="section-header">
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        <div className="flex-header">
           <img
             src={chatIcon}
             alt="Contact icon"
-            style={{ width: "42px", height: "42px", objectFit: "contain" }}
+            className="icon-md"
           />
           <h2>Contact</h2>
         </div>
-        <p>Let’s connect or collaborate.</p>
+        <p>Feel free to reach out if you want to discuss a project,
+            collaboration, or opportunity.</p>
       </div>
 
       <div className="contact-grid">
         <div className="contact-card">
           <h3>Get in Touch</h3>
-          <p>
-            Feel free to reach out if you want to discuss a project,
-            collaboration, or opportunity.
-          </p>
+          
 
           <ul className="contact-list">
             <li>
@@ -47,13 +45,7 @@ export default function Contact() {
           </ul>
         </div>
 
-        <div className="contact-card">
-          <h3>Availability</h3>
-          <p>
-            I’m open to internships, collaborations, and creative tech
-            opportunities. If you’re interested, feel free to reach out to me.
-          </p>
-        </div>
+
       </div>
     </section>
   );

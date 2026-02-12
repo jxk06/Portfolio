@@ -9,20 +9,28 @@ const projects = [
 
     media: [
       "xPVtaejTem8",
-      
+
     ],
 
-    meta: ["Figma", "UI/UX", "Wireframes to Hi-Fi", "Prototype"],
+    meta: ["Figma", "UI/UX", "Wireframe", "Prototype"],
 
     process: {
-      conceptualisation:
-        "Identified common pain points in sustainable shopping (trust, product transparency, decision fatigue, and filtering. Defined the goal: make eco-friendly choices feel easy, credible, and visually premium while still being fast to browse.",
+      conceptualisation: [
+        "Conducted market and competitor research on existing sustainable fashion platforms to identify strengths, weaknesses, and gaps in user experience.",
+        "Carried out user interviews and surveys to understand pain points such as trust issues, lack of product transparency, decision fatigue, and complex filtering systems.",
+        "Synthesised findings into user personas and user stories to define clear design goals: making sustainable shopping intuitive, credible, and efficient to browse."
+      ],
 
-      planning:
-        "Created low-fidelity sketches, user flows, and information hierarchy before developing a full design system.",
+      planning: [
+        "Created low-fidelity sketches, user journey map, user personas, and user flows.",
+        "Established information hierarchy to structure content effectively.",
+        "Developed a full design system (UI kit) before moving to high-fidelity designs."
+      ],
 
-      development:
-        "Designed hi-fi mockups for desktop and mobile, applying components and auto-layout for consistency."
+      development: [
+        "Designed high-fidelity interactive prototypes in Figma for both desktop and mobile using components and Auto Layout for scalability.",
+        "Used components from UI kit wherever possible for consistency and efficiency."
+      ]
     }
   },
 
@@ -36,20 +44,30 @@ const projects = [
 
     media: [
       "F6emgMSFkeg",
-      
+
     ],
 
-    meta: ["React Native", "Mobile App", "Async Storage", "Front-end", "Back-end", "Authorization", "Authentication", "SQL"],
+    meta: ["React Native", "Mobile App", "Async Storage", "Front-end", "Back-end", "Authorization", "Authentication", "SQL", "CSS"],
 
     process: {
-      conceptualisation:
-        ".",
+      conceptualisation: [
+        "The idea was to create a community-focused mobile application that tracks tree counts across different regions in Singapore.",
+        "The goal was to promote environmental awareness by visualising tree data and calculating environmental severity levels based on total tree counts.",
+        "The concept focused on simplicity, accessibility, and real-time data tracking across devices."
+      ],
 
-      planning:
-        "Created moodboards, style direction, and layout sketches before designing screens.",
+      planning: [
+        "Planned the overall system architecture and logic including front-end mobile interfaces and a backend web service for data storage.",
+        "Designed user flows for adding tree data, viewing regional statistics, authentication, and monthly reset functionality.",
+        "Structured the database schema to organise tree counts by region and ensure accurate calculations of environmental severity.",
+        "Color-coded regions according to severity and incorporated styled icons to improve clarity and user engagement."
+      ],
 
-      development:
-        "Built a working front-end mobile app and back-end database."
+      development: [
+        "Developed the mobile application using React Native in Webstorm and integrated it with a backend web service connected to an SQL database I created in MySQL Workbench.",
+        "Implemented authentication and authorization to manage user access, built CRUD functionality for tree data, enabled automatic environmental severity calculations, and ensured persistent storage and retrieval of data across sessions and devices.",
+        "Used external CSS for styling."
+      ]
     }
   },
 
@@ -73,14 +91,17 @@ const projects = [
     meta: ["React Native", "AsyncStorage", "Mobile App", "Front-end"],
 
     process: {
-      conceptualisation:
-        "The goal was to create a simple personal finance tool to help students better understand and keep track of their  spending.",
+      conceptualisation: [
+        "The goal was to create a simple personal finance tool to help students better understand and keep track of their spending."
+      ],
 
-      planning:
-        "Designed screens for adding expenses, setting limits, viewing history, and calculating totals to target specific needs of students.",
+      planning: [
+        "Designed screens for adding expenses, setting limits, viewing history, and calculating totals to target specific needs of students."
+      ],
 
-      development:
+      development: [
         "Implemented persistent storage with AsyncStorage, UI components, and spending limit alerts."
+      ]
     }
   },
 
@@ -93,21 +114,24 @@ const projects = [
     image: "/images/Screenshot 2026-02-04 193818.png",
 
     media: [
-    
+
       "6Y41D9qAD6M"
     ],
 
     meta: ["Unity", "C#", "VR Interaction"],
 
     process: {
-      conceptualisation:
-        "Inspired by real escape rooms and magic, the goal was to recreate dramatic, interactive and immersive puzzle mechanics in VR.",
+      conceptualisation: [
+        "Inspired by real escape rooms and magic, the goal was to recreate dramatic, interactive, and immersive puzzle mechanics in VR."
+      ],
 
-      planning:
-        "Created a Game Design Document, Storyboarded the user journey, created user personas, mapped out object interactions, and created a sequence system for puzzle logic.",
+      planning: [
+        "Created a Game Design Document, storyboarded the user journey, created user personas, mapped out object interactions, and created a sequence system for puzzle logic."
+      ],
 
-      development:
+      development: [
         "Used C# scripting to detect correct object sequence interactions and trigger animations."
+      ]
     }
   },
 
@@ -123,24 +147,27 @@ const projects = [
       "Egc98lN_eIA",
       "/images2/Screenshot 2026-02-04 152451.png",
       "/images2/Screenshot 2025-05-18 215631.png",
-      
+
     ],
 
     meta: ["Unity", "Vuforia", "AR"],
 
     process: {
-      conceptualisation:
-        "Developed a lightweight packing planner for users to organise travel essentials.",
+      conceptualisation: [
+        "Developed a lightweight packing planner for users to organise travel essentials."
+      ],
 
-      planning:
-        "Planned component breakdown: form, list, stats section, sorting options, and clear functions.",
+      planning: [
+        "Planned component breakdown: form, list, stats section, sorting options, and clear functions."
+      ],
 
-      development:
+      development: [
         "Used React hooks to manage user input, add/delete items, track packed items, and display progress."
+      ]
     }
   }
 
-  
+
 ];
 
 export default projects;

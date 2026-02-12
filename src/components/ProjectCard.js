@@ -13,7 +13,6 @@ export default function ProjectCard({ project }) {
     >
       <div className="project-thumbWrap">
         <img src={project.image} className="project-thumb" alt={project.title} />
-        <span className="project-sticker">{project.tag}</span>
       </div>
 
       <div className="project-info">

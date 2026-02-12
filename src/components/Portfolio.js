@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import projects from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import projectsIcon from "../assets/projects.jpg";
 
 export default function Portfolio() {
   const [filter, setFilter] = useState("all");
@@ -13,8 +14,15 @@ export default function Portfolio() {
   return (
     <section className="section portfolio">
       <div className="section-header">
-        <h2>Projects</h2>
-        <p>Design & Development work (click to view details)</p>
+        <div className="flex-header">
+          <img
+            src={projectsIcon}
+            alt="Projects icon"
+            className="icon-md"
+          />
+          <h2>Projects</h2>
+        </div>
+        <p>Design & Development work i've done</p>
       </div>
 
       <div className="filter-row">
