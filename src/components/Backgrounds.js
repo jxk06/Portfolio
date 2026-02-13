@@ -20,11 +20,7 @@ export default function Backgrounds() {
     // Helper to determine animation state
     const getClass = (pagePath) => {
         // Basic mapping of paths to simplistic names for CSS
-        const current =
-            activePage === "/" ? "home" :
-                activePage === "/about" ? "about" :
-                    activePage === "/contact" ? "contact" :
-                        activePage.startsWith("/portfolio") ? "portfolio" : "";
+
 
         const target =
             pagePath === "home" ? "/" :

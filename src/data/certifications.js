@@ -1,8 +1,8 @@
 const certifications = [
   {
     id: 1,
-    title: "HackerRank – CSS Certification",
-    icon: "/assets/images/cert-css.png",
+    title: "React (Basic)",
+    icon: "/images2/Screenshot 2026-02-12 142024.png",
   },
   {
     id: 2,
