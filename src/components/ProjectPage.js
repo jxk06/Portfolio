@@ -19,6 +19,8 @@ export default function ProjectPage() {
   const isYouTube = (src) =>
     typeof src === "string" && src.length === 11 && !src.includes("/");
 
+  const isMp4 = (src) => typeof src === "string" && src.endsWith(".mp4");
+
   return (
     <div className="project-page active-page">
       <Link to="/portfolio" className="btn ghost">
@@ -63,6 +65,14 @@ export default function ProjectPage() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
+              </div>
+            ) : isMp4(src) ? (
+              <div
+                key={index}
+                className="media-item clickable"
+                onClick={() => setActiveMedia({ type: "video", src })}
+              >
+                <video src={src} className="media-img" muted loop autoPlay playsInline />
               </div>
             ) : (
               <div
@@ -138,6 +148,8 @@ export default function ProjectPage() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
+            ) : activeMedia.type === "video" ? (
+              <video src={activeMedia.src} controls autoPlay style={{ maxWidth: "100%", maxHeight: "100%" }} />
             ) : (
               <img src={activeMedia.src} alt="" />
             )}

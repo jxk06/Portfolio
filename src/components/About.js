@@ -28,7 +28,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="about-card">
+        <div className="about-card certifications-card">
           <h3>Certifications</h3>
           <ul className="cert-list">
             {certifications.map((cert) => (

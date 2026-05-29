@@ -3,22 +3,23 @@ const projects = [
     id: 1,
     category: "design",
     tag: "Design",
-    title: "Sustainable Fashion E-Commerce UI",
+    title: "Health Food Tracker and Finder",
     subtitle: "High-fidelity desktop & mobile UI designed in Figma.",
-    image: "/images/Screenshot 2025-12-09 202307.png",
+    image: "/images/Screenshot 2026-05-29 190328.png",
 
     media: [
-      "xPVtaejTem8",
-
+      "/images/Screenshot 2026-05-29 185551.png",
+      "/images/Screenshot 2026-05-29 185612.png",
+      "/images/Screen Recording 2026-02-07 235759.mp4"
     ],
 
     meta: ["Figma", "UI/UX", "Wireframe", "Prototype"],
 
     process: {
       conceptualisation: [
-        "Conducted market and competitor research on existing sustainable fashion platforms to identify strengths, weaknesses, and gaps in user experience.",
-        "Carried out user interviews and surveys to understand pain points such as trust issues, lack of product transparency, decision fatigue, and complex filtering systems.",
-        "Synthesised findings into user personas and user stories to define clear design goals: making sustainable shopping intuitive, credible, and efficient to browse."
+        "Conducted market and competitor research on existing health food tracking platforms to identify strengths, weaknesses, and gaps in user experience.",
+        "Carried out user interviews and surveys to understand pain points such as difficulty tracking meals, lack of reliable nutritional information, and finding healthy food options nearby.",
+        "Synthesised findings into user personas and user stories to define clear design goals: making healthy eating intuitive, engaging, and efficient to track."
       ],
 
       planning: [
@@ -47,7 +48,7 @@ const projects = [
 
     ],
 
-    meta: ["React Native", "Mobile App", "Async Storage", "Front-end", "Back-end", "Authorization", "Authentication", "SQL", "CSS"],
+    meta: ["Async Storage", "Front-end", "Back-end", "Authorization", "Authentication", "CSS", "Verification"],
 
     process: {
       conceptualisation: [
@@ -88,7 +89,7 @@ const projects = [
       "EiEEvYv3kYQ"
     ],
 
-    meta: ["React Native", "AsyncStorage", "Mobile App", "Front-end"],
+    meta: ["AsyncStorage", "Front-end", "CSS"],
 
     process: {
       conceptualisation: [
@@ -110,12 +111,15 @@ const projects = [
     category: "development",
     tag: "Dev",
     title: "VR Escape Room Prototype",
-    subtitle: "A Unity VR puzzle game involving object sequence interaction.",
+    subtitle: "A VR puzzle game involving object sequence interaction.",
     image: "/images/Screenshot 2026-02-04 193818.png",
 
     media: [
-
-      "6Y41D9qAD6M"
+      "6Y41D9qAD6M",
+      "/images/Screenshot 2026-02-12 145115.png",
+      "/images/Screenshot 2026-02-12 145335.png",
+      "/images/Screenshot 2026-02-12 145404.png",
+      "/images/Screenshot 2026-02-12 145511.png"
     ],
 
     meta: ["Unity", "C#", "VR Interaction"],
@@ -147,27 +151,94 @@ const projects = [
       "Egc98lN_eIA",
       "/images2/Screenshot 2026-02-04 152451.png",
       "/images2/Screenshot 2025-05-18 215631.png",
-
+      "/images/Screenshot 2025-05-19 021708.png"
     ],
 
-    meta: ["Unity", "Vuforia", "AR"],
+    meta: ["Unity", "Vuforia", "AR", "3D Modeling"],
 
     process: {
       conceptualisation: [
-        "Developed a lightweight packing planner for users to organise travel essentials."
+        "Envisioned a modern, interactive way to present a professional portfolio, replacing a standard paper business card with an immersive AR experience.",
+        "The goal was to allow potential clients or employers to scan the physical card and instantly see 3D models and interactive buttons pop up on their screen."
       ],
 
       planning: [
-        "Planned component breakdown: form, list, stats section, sorting options, and clear functions."
+        "Sketched out the layout for the AR elements, deciding where interactive buttons (like email and portfolio links) and 3D assets would appear relative to the physical card.",
+        "Created and sourced 3D assets to be rendered in augmented reality."
       ],
 
       development: [
-        "Used React hooks to manage user input, add/delete items, track packed items, and display progress."
+        "Used Unity and the Vuforia Engine to set up image target recognition, ensuring stable tracking of the business card.",
+        "Programmed interactive elements in C# to handle user inputs, triggering animations and opening external links when the virtual buttons are tapped."
+      ]
+    }
+  },
+
+  {
+    id: 6,
+    category: "design",
+    tag: "Design",
+    title: "Travel Instagram Grid Post",
+    subtitle: "A seamless 3x3 Instagram grid puzzle made using Adobe tools.",
+    image: "/images/Screenshot 2025-07-25 214107.png",
+
+    media: [
+      "/images/Screenshot 2025-07-21 142529.png",
+      "/images/Screenshot 2025-07-25 214107.png"
+    ],
+
+    meta: ["Adobe Photoshop", "Adobe Illustrator", "Social Media Design", "Grid Layout"],
+
+    process: {
+      conceptualisation: [
+        "Wanted to create an engaging visual experience for a travel campaign encouraging people to travel with this company'.",
+        "Decided on a continuous 9-square grid puzzle for Instagram that reveals a larger, interconnected landscape when viewed on a profile page."
+      ],
+
+      planning: [
+        "Sourced high-quality imagery of iconic landmarks, including the Great Wall of China, Big Ben, and the Sydney Opera House.",
+        "Mapped out the 3x3 layout to ensure each individual square could stand alone as an interesting post while contributing to the cohesive bigger picture."
+      ],
+
+      development: [
+        "Used Adobe Photoshop and Illustrator to blend the different landscapes, adjust lighting and color grading for consistency, and add dynamic elements like the airplane and sun rays.",
+        "Sliced the final large canvas into nine perfectly sized 1080x1080px squares ready for sequential publishing."
+      ]
+    }
+  },
+
+  {
+    id: 7,
+    category: "design",
+    tag: "Design",
+    title: "Marine Biodiversity Trail Poster",
+    subtitle: "An educational event poster designed in Canva",
+    image: "/images/Screenshot 2025-04-27 211913.png",
+
+    media: [
+      "/images/Screenshot 2025-04-27 211913.png"
+    ],
+
+    meta: ["Canva", "Graphic Design", "Print Media", "Event Poster"],
+
+    process: {
+      conceptualisation: [
+        "Tasked with creating an engaging poster for a Marine Biodiversity Trail event at East Coast Park, organized by Greennudge.",
+        "The primary goal was to showcase local marine life and their interconnected ecosystem to attract environmentally conscious participants."
+      ],
+
+      planning: [
+        "Compiled essential information (date, time, location, organizer) to establish a clear typographic structure.",
+        "Opted for a split-composition design featuring a winding path, a magnifying glass, and various hidden elements to emphasize discovery and exploration."
+      ],
+
+      development: [
+        "Utilised Canva to assemble the artwork, incorporating vibrant illustrations of aquatic animals, coral reefs, and footprints.",
+        "Constructed a visual food web flowchart in the top section to educate viewers at a glance.",
+        "Applied core principles like visual hierarchy to smoothly guide the reader's eye downwards, and used high contrast to ensure text readability against the rich background."
       ]
     }
   }
-
-
 ];
 
 export default projects;

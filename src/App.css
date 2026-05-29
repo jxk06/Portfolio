@@ -539,7 +539,7 @@ h4 {
 
 .page-about .section-header,
 .page-about .about-grid {
-  max-width: 1000px;
+  max-width: 1400px;
   margin-left: 0;
   margin-right: auto;
 }
@@ -779,7 +779,7 @@ h4 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.8fr;
   gap: 2rem;
 }
 
@@ -851,33 +851,54 @@ h4 {
   text-transform: uppercase;
 }
 
+.certifications-card {
+  /* Removed grid-column so it stays side-by-side with Who I Am */
+}
+
 /* Certifications list */
 .cert-list {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Scrollbar styling for cert-list */
+.cert-list::-webkit-scrollbar {
+  width: 6px;
+}
+.cert-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.cert-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.cert-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .cert-list li {
   display: flex;
-  /* Changed from grid for better alignment */
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border: 2px dashed rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  /* ✅ Clickable hint */
   transition: background 0.2s ease;
 }
 
 .cert-list li:hover {
   background: rgba(255, 255, 255, 0.05);
-  /* ✅ Hover effect */
 }
 
-.cert-list li:last-child {
-  border-bottom: none;
-}
+
 
 .cert-badge {
   width: 2.5rem;
